@@ -67,35 +67,28 @@ package FirstTwitterApp;
 	    	System.out.println("Tweeted: " + tweet.getText());
 
 	   //trending locations:
-	    	
+	    ResponseList<Location> location;
+        location = twitter.getAvailableTrends();
+        System.out.println("Trending information for the following cities:");
+        int count =1;
+      
+		for (Location l : location) {
+            // used Yahoo! earth identifier
+            System.out.println(count +". "+ l.getName() + " in "+ l.getCountryName());
+            count++;      
+        }
 
 
 
+	   //display posts:
+	    	 ResponseList<Status> tt = twitter.getUserTimeline(twitter.getScreenName());
+        for(Status b: tt) {
+                //Displaying the tweets 
+            System.out.println(twitter.getScreenName() +" posted "+b.getText()+ ". It was retweeted "+b.getRetweetCount()+" times."); 
+            //couldnt display time at which it was posted
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
+        }
+    }
+}
 
 
