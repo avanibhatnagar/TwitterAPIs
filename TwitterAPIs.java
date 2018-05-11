@@ -5,7 +5,7 @@ package FirstTwitterApp;
 	import java.util.List;
 	
 
-	public class TwitterApp {
+	public class TwitterAPIs {
 		
 		public static void main (String[] args) throws TwitterException{
 			ConfigurationBuilder cb1 = new ConfigurationBuilder();
