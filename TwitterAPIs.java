@@ -62,9 +62,12 @@ package FirstTwitterApp;
       }
 
 
+      //post a tweer:
+      Status tweet = twitter.updateStatus("Testing posting a tweet");
+	    	System.out.println("Tweeted: " + tweet.getText());
 
-
-
+	   //trending locations:
+	    	
 
 
 
